@@ -1,0 +1,16 @@
+.App {
+  background-color: #181818;
+}
+
+.flex {
+  display: flex;
+}
+
+img {
+  width: 50vw;
+}
+
+.filtered {
+  filter: grayscale(1) invert(3%) sepia(47%) saturate(832%) hue-rotate(153deg)
+    brightness(98%) contrast(108%);
+}
