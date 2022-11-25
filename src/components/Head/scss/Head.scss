@@ -3,11 +3,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100vh;
 }
 
-.dummy {
-  height: 75px;
+.space-filler {
+  height: 35px;
+  width: 100%;
+  background-color: #ca5355;
 }
 
 header {
@@ -15,7 +16,7 @@ header {
 }
 
 .banner {
-  height: 100vh;
+  height: 110vh;
   background: #ca5355;
 }
 
@@ -25,5 +26,4 @@ header {
   right: 0;
   left: 0;
   z-index: 0;
-  filter: grayscale(0.5);
 }

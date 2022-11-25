@@ -32,7 +32,7 @@ export default function Nav() {
   };
 
   return (
-    <nav>
+    <nav style={{ zIndex: 1 }}>
       <h1>Michael McNair</h1>
       <ul>
         <li>

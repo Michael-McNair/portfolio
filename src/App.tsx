@@ -1,28 +1,12 @@
 import './App.css';
 import Head from './components/Head/Head';
+import Main from './components/Main/Main';
 
 export default function App() {
   return (
     <div className="App">
       <Head />
-      <div className="a">
-        <h1>a</h1>
-        <h1>a</h1>
-        <h1>a</h1>
-        <h1>a</h1>
-        <h1>a</h1>
-        <h1>a</h1>
-        <h1>a</h1>
-        <h1>a</h1>
-        <h1>a</h1>
-        <h1>a</h1>
-        <h1>a</h1>
-        <h1>a</h1>
-        <h1>a</h1>
-        <h1>a</h1>
-        <h1>a</h1>
-        <h1>a</h1>
-      </div>
+      <Main />
     </div>
   );
 }

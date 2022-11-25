@@ -5,6 +5,9 @@ nav {
   max-width: 1200px;
   width: 80%;
   padding: 0.5rem 0;
+  position: absolute;
+  top: 0;
+  height: 75px;
   @media (max-width: 820px) {
     width: 100%;
     padding: 15px;
@@ -15,6 +18,7 @@ nav {
     padding-top: 0.4rem;
     font-size: 3rem;
     cursor: pointer;
+    color: #031229;
     @media (max-width: 1000px) {
       font-size: 3rem;
     }
@@ -31,8 +35,12 @@ nav {
     white-space: nowrap;
     font-weight: 300;
     cursor: pointer;
+    color: #031229;
     @media (max-width: 1000px) {
       font-size: 1.1rem;
+    }
+    &:hover {
+      opacity: 0.9;
     }
   }
   .hamburger {
