@@ -17,7 +17,7 @@ export default function Nav() {
         },
         line2: { transform: 'translate(0, -50%) rotate(225deg)', top: '50%' },
         line3: { transform: 'translate(0, -50%) rotate(-225deg)', top: '50%' },
-        collapse: { width: '100%', height: '100vh' },
+        collapse: { width: '160%', height: '170vh' },
       };
     });
   };
@@ -32,7 +32,7 @@ export default function Nav() {
   };
 
   return (
-    <nav style={{ zIndex: 1 }}>
+    <nav>
       <h1>Michael McNair</h1>
       <ul>
         <li>
