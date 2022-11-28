@@ -2,53 +2,64 @@ import React, { useState, useEffect } from 'react';
 import './scss/Nav.css';
 
 export default function Nav() {
-  const [styles, setStyles] = useState({
+  const collapseHiddenStyles = {
     line1: {},
     line2: {},
     line3: {},
     collapse: {},
-  });
+    nav: {},
+  };
+
+  const collapseShownStyles = {
+    line1: {
+      backgroundColor: 'transparent',
+    },
+    line2: { transform: 'translate(0, -50%) rotate(225deg)', top: '50%' },
+    line3: { transform: 'translate(0, -50%) rotate(-225deg)', top: '50%' },
+    collapse: { width: '160%', height: '170vh' },
+    nav: { position: 'fixed' },
+  };
+
+  const [styles, setStyles] = useState(collapseHiddenStyles);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth > 820) {
+        setStyles(collapseHiddenStyles);
+      }
+    };
+    window.addEventListener('resize', handleResize);
+    return function cleanupListener() {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   const handleMouseEnter = () => {
-    setStyles((prevStyles: any) => {
-      return {
-        line1: {
-          backgroundColor: 'transparent',
-        },
-        line2: { transform: 'translate(0, -50%) rotate(225deg)', top: '50%' },
-        line3: { transform: 'translate(0, -50%) rotate(-225deg)', top: '50%' },
-        collapse: { width: '160%', height: '170vh' },
-      };
-    });
+    setStyles(collapseShownStyles);
   };
 
   const handleClick = () => {
-    setStyles({
-      line1: {},
-      line2: {},
-      line3: {},
-      collapse: {},
-    });
+    setStyles(collapseHiddenStyles);
   };
 
   return (
-    <nav style={{ zIndex: 1 }}>
+    <nav style={styles.nav}>
       <h1>Michael McNair</h1>
       <ul>
         <li>
-          <h4>About Me</h4>
+          <a href="#about-me">About Me</a>
         </li>
         <li>
-          <h4>Skills</h4>
+          <a href="#skills">Skills</a>
         </li>
         <li>
-          <h4>Projects</h4>
+          <a href="#projects">Projects</a>
         </li>
         <li>
-          <h4>Experience</h4>
+          <a href="#experience">Experience</a>
         </li>
         <li>
-          <h4>Contact</h4>
+          <a href="#contact">Contact</a>
         </li>
       </ul>
       <div
@@ -63,19 +74,19 @@ export default function Nav() {
       <div className="collapse" style={styles.collapse}>
         <ul>
           <li>
-            <h2>About Me</h2>
+            <a href="#about-me">About Me</a>
           </li>
           <li>
-            <h2>Skills</h2>
+            <a href="#skills">Skills</a>
           </li>
           <li>
-            <h2>Projects</h2>
+            <a href="#projects">Projects</a>
           </li>
           <li>
-            <h2>Experience</h2>
+            <a href="#experience">Experience</a>
           </li>
           <li>
-            <h2>Contact</h2>
+            <a href="#contact">Contact</a>
           </li>
         </ul>
       </div>

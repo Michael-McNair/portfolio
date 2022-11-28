@@ -10,6 +10,7 @@ import mountain7 from '../../images/mountain7.png';
 import mountain8 from '../../images/mountain8.png';
 import mountain9 from '../../images/mountain9.png';
 import mountain10 from '../../images/mountain10.png';
+import mountainsMobile from '../../images/mountains-mobile.png';
 import './scss/Head.css';
 import { ParallaxProvider, ParallaxBanner } from 'react-scroll-parallax';
 
@@ -17,9 +18,8 @@ export default function Head() {
   return (
     <div className="Head">
       <Nav />
-
       <div className="space-filler"></div>
-
+      <img src={mountainsMobile} className="mobile-head-background" />
       <ParallaxProvider>
         <ParallaxBanner
           className="banner"
@@ -42,7 +42,6 @@ export default function Head() {
               shouldAlwaysCompleteAnimation: true,
               expanded: false,
             },
-            {},
             {
               image: mountain3,
               translateY: [0, 45.5],
